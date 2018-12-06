@@ -1,1 +1,5 @@
-<p>This is the entries index page</p>
+<%= link_to 'Add New', new_entry_path(@entry) %>
+<%= @entries.each do |current_entry| %>
+<%= render 'entry', entry: current_entry %>
+<%end%>
+

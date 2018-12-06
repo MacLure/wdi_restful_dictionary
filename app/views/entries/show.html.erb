@@ -1,1 +1,2 @@
-<p>This page will display information about entry number <%= params[:id] %></p>
+<%= render 'entry', entry: @entry %>
+<%= link_to 'Edit', edit_entry_path(@entry) %> | <%= link_to("Delete", "/entries/#{@entry.id}", method: :delete, data: {confirm: "Are you sure you want to delete this entry?"})  %> | <%= link_to 'Back to all entries', '/entries' %>
